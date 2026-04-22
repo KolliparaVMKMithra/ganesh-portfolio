@@ -1,0 +1,12 @@
+data/visitors.sqlite3
+data/visitors.sqlite3-journal
+data/visitors.sqlite3-wal
+data/visitors.sqlite3-shm
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ganesh Suraj — Portfolio</title>
+    <meta name="description" content="Addanki Ganesh Suraj — B.Tech CSE | RAG + Web | Hackathon winner" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="bg-grid" aria-hidden="true"></div>
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+
+    <div id="gate" class="gate">
+      <div class="gate-card">
+        <div class="gate-top">
+          <div class="gate-badge">Access</div>
+          <div class="gate-title">Before you enter</div>
+          <div class="gate-sub">Drop your name — I’ll personalize the experience.</div>
+        </div>
+
+        <form id="gate-form" class="gate-form" autocomplete="on">
+          <label class="sr-only" for="viewerName">Your name</label>
+          <input id="viewerName" name="viewerName" type="text" inputmode="text" placeholder="e.g., Priya" required />
+          <button type="submit" class="btn btn-primary">
+            Enter Portfolio
+            <span class="btn-glow" aria-hidden="true"></span>
+          </button>
+          <div id="gate-hint" class="gate-hint" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="gate-foot">
+          <div class="fine">No spam. Stored only as a visitor log.</div>
+        </div>
+      </div>
+    </div>
+
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Ganesh Suraj</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <div id="hello" class="hello" aria-live="polite"></div>
+          <button id="theme" class="icon-btn" type="button" aria-label="Toggle theme">
+            <span class="icon-sun" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="pill">
+            <span class="pulse" aria-hidden="true"></span>
+            B.Tech CSE • RAG • Web Dev • Hackathons
+          </div>
+          <h1 class="h1 name-h1">
+            <span class="name-plain">Addanki</span>
+            <span class="name-grad">Ganesh</span>
+            <span class="name-outline">Suraj</span>
+          </h1>
+          <p class="lead">
+            I’m <strong>Addanki Ganesh Suraj</strong> — a Computer Science student with strong fundamentals in DSA and OOP.
+            I build scalable apps in Python + web technologies, and love shipping interactive interfaces.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">Explore Projects</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">9.43</div>
+              <div class="stat-label">GPA (Amrita)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">350+</div>
+              <div class="stat-label">Club members led</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">8×</div>
+              <div class="stat-label">Hackathon finalist</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="portrait">
+            <img src="/assets/profile.jpeg" alt="Ganesh Suraj portrait" loading="eager" />
+            <div class="portrait-ring" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>Strong fundamentals, fast execution, collaborative leadership.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card tilt">
+            <h3>Summary</h3>
+            <p>
+              B.Tech Computer Science student with strong fundamentals in software engineering, data structures, and OOP.
+              Experienced in building scalable applications using Python and modern web technologies through projects,
+              hackathons, and club leadership.
+            </p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>DSA</li>
+              <li>DBMS</li>
+              <li>FastAPI</li>
+              <li>React / Next.js</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+          <div class="card tilt">
+            <h3>Highlights</h3>
+            <ul class="list">
+              <li>Web Developer Head Executive — Microsoft Student Ambassador (Feb 2024 – Present)</li>
+              <li>Founder & Technical Lead — CHAKRAVYUHA Technical Club (July 2025 – Present)</li>
+              <li>Innofusion National Hackathon — 1st place (100+ teams)</li>
+              <li>Microsoft Imagine Cup — 3rd place</li>
+            </ul>
+            <div class="callout">
+              <div class="callout-title">What I’m optimizing for</div>
+              <div class="callout-body">Performance, maintainability, and delightful UX with real impact.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p>Engineering core + modern tooling + GenAI.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card tilt">
+            <h3>Programming</h3>
+            <p class="muted">Python • Java (basic) • DSA • OOP • DBMS</p>
+            <div class="skill-stack" data-stack="prog" aria-label="Programming skills"></div>
+          </div>
+          <div class="card tilt">
+            <h3>Web & Systems</h3>
+            <p class="muted">HTML • CSS • SQL • FastAPI • Docker • Agile/Scrum • React • Next.js</p>
+            <div class="skill-stack" data-stack="web" aria-label="Web and systems skills"></div>
+          </div>
+          <div class="card tilt">
+            <h3>AI/ML</h3>
+            <p class="muted">RAG • LangChain • FAISS • Pinecone</p>
+            <div class="skill-stack" data-stack="ai" aria-label="AI and ML skills"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Built for accuracy, speed, and real-world usefulness.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card project tilt" data-tags="python rag faiss llms genai">
+            <div class="project-top">
+              <h3>Document Analysis RAG Model</h3>
+              <div class="tag">GenAI</div>
+            </div>
+            <ul class="list">
+              <li>Built a Retrieval-Augmented Generation pipeline for document analysis & compliance workflows.</li>
+              <li>Integrated FAISS-based retrieval for efficient knowledge extraction.</li>
+              <li>Fine-tuned models with domain-specific datasets.</li>
+            </ul>
+            <div class="chips">
+              <span>Python</span><span>RAG</span><span>FAISS</span><span>LLMs</span>
+            </div>
+          </article>
+
+          <article class="card project tilt" data-tags="python ocr azure-vision tesseract cv">
+            <div class="project-top">
+              <h3>Smart Food Expiry & Nutrition Tracker</h3>
+              <div class="tag">Computer Vision</div>
+            </div>
+            <ul class="list">
+              <li>Detected expiry dates from images using OCR + Azure Vision to reduce food waste.</li>
+              <li>Barcode scanning + nutrition analysis + personalized storage recommendations.</li>
+              <li>Custom reminders for expiring products, dietary suggestions, and recipe integration.</li>
+            </ul>
+            <div class="chips">
+              <span>Python</span><span>OCR</span><span>Azure Vision</span><span>Tesseract</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-head">
+          <h2>Experience & Volunteering</h2>
+          <p>Leading teams and shipping maintainable UI.</p>
+        </div>
+        <div class="timeline">
+          <div class="time-item card tilt">
+            <div class="time-title">
+              <h3>Web Developer Head Executive</h3>
+              <div class="muted">Microsoft Student Ambassador • Feb 2024 – Present</div>
+            </div>
+            <ul class="list">
+              <li>Designed interactive web apps using HTML/CSS to improve UX and accessibility.</li>
+              <li>Implemented modular code and optimized front-end performance for smooth interactions.</li>
+            </ul>
+          </div>
+          <div class="time-item card tilt">
+            <div class="time-title">
+              <h3>Founder, Technical Lead</h3>
+              <div class="muted">CHAKRAVYUHA Technical Club • July 2025 – Present</div>
+            </div>
+            <ul class="list">
+              <li>Founded & led a 350+ student technical club; increased hackathon participation by ~40%.</li>
+              <li>Guided juniors on technical projects and built an active innovation culture.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p>Academic excellence with advanced computing exposure.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card tilt">
+            <h3>Amrita Vishwa Vidyapeetham, Amaravati</h3>
+            <div class="muted">B.Tech in Computer Science • Sept 2023 – Present • GPA 9.43/10</div>
+            <div class="muted">Coursework: DSA, OOP, Operating Systems</div>
+          </div>
+          <div class="card tilt">
+            <h3>IIT Mandi</h3>
+            <div class="muted">Minor in Advanced Computing & Emerging Technologies • Sept 2024 – Present • 96%</div>
+            <div class="muted">Coursework: Python, DSA, DBMS, Machine Learning</div>
+          </div>
+          <div class="card tilt">
+            <h3>Narayana Junior College</h3>
+            <div class="muted">AP Board • 2021 – 2023 • 94%</div>
+            <div class="muted">Maths, Physics, Chemistry</div>
+          </div>
+          <div class="card tilt">
+            <h3>VP Siddhartha Public School</h3>
+            <div class="muted">CBSE • 2021 • 80%</div>
+            <div class="muted">Achievements: Perfect, Sports & Music Club</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Certifications</h2>
+          <p>Cloud + GenAI foundations.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card tilt">
+            <h3>AWS Academy</h3>
+            <p class="muted">AI and ML Foundations</p>
+          </div>
+          <div class="card tilt">
+            <h3>Udacity</h3>
+            <p class="muted">Generative AI with AWS</p>
+          </div>
+          <div class="card tilt">
+            <h3>Oracle</h3>
+            <p class="muted">Oracle Cloud Foundations Associate</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Achievements</h2>
+          <p>Competitive outcomes, consistent execution.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card tilt">
+            <h3>Innofusion National Hackathon — 1st Place</h3>
+            <p class="muted">Secured 1st place out of 100+ teams by building an AI-powered solution.</p>
+          </div>
+          <div class="card tilt">
+            <h3>Microsoft Imagine Cup — 3rd Place</h3>
+            <p class="muted">Recognized for an AI-enabled social impact project.</p>
+          </div>
+          <div class="card tilt">
+            <h3>Hackathon Finalist (8×)</h3>
+            <p class="muted">HackVyuha, KodeKurukshetra, HackTheFuture, Ease-the-Error and more.</p>
+          </div>
+          <div class="card tilt">
+            <h3>Leadership</h3>
+            <p class="muted">Built an engaging club environment that inspires innovation and collaboration.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Open to internships, collaborations, and ambitious builds.</p>
+        </div>
+        <div class="contact card tilt">
+          <div class="contact-row">
+            <div class="contact-item">
+              <div class="muted">Email</div>
+              <a href="mailto:ganeshsuraj29@gmail.com">ganeshsuraj29@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <div class="muted">Phone</div>
+              <a href="tel:+919618652908">+91 96186 52908</a>
+            </div>
+            <div class="contact-item">
+              <div class="muted">Location</div>
+              <div>Vijayawada</div>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <button id="copyEmail" class="btn btn-ghost" type="button">Copy Email</button>
+            <a class="btn btn-primary" href="#top">Back to Top</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> Addanki Ganesh Suraj</div>
+        <div class="muted">Built with a tiny Python server + SQLite visitor log.</div>
+      </footer>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
